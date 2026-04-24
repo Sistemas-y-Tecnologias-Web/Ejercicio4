@@ -1,0 +1,14 @@
+header img {
+    height: auto;
+    width: 100%;
+
+}
+
+.agent-title {
+    width: 100%;
+    position: absolute;
+    font-size: 10em;
+    padding-left: 150px;
+    letter-spacing: 15px;
+    font-style: italic;
+}

@@ -1,10 +1,14 @@
 nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
     justify-content: space-between;
     background-color: var(--ow-surface);
     padding: 10px;
+    z-index: 50;
 }
 
 .logo {
@@ -34,5 +38,4 @@ nav {
     align-items: center;
     gap: 15px;
 }
-
 

@@ -18,9 +18,9 @@ body {
   --ow-muted:   #64748B;
   --ow-orange:  #F97316;
   --ow-blue:    #2196F3;
-  --ow-tank:    #4A6ABA;
-  --ow-damage:  #C75A0A;
-  --ow-support: #007D72;
+  --ow-tank:    #0A1430;
+  --ow-damage:  #4A1F03;
+  --ow-support: #002824;
 }
 
 [data-theme="light"] {
