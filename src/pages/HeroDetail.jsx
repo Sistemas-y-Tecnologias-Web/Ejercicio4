@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useHero } from "../hooks/useHeroes"
+import TabContainer from "../components/TabContainer"
 import './HeroDetail.css'
 
 export default function HeroDetail() {
@@ -16,6 +17,9 @@ export default function HeroDetail() {
             <header>
                 <img src={hero.backgrounds[2].url} alt="" />
                 <h1 className="agent-title">{hero.name}</h1>
+                <p>{hero.description}</p>
+                <h2>Abilities</h2>
+                <TabContainer hero={hero}/>
             </header>
         </>
     )

@@ -4,6 +4,14 @@ header img {
 
 }
 
+header h2 {
+    font-family: 'OvFont';
+    color: var(--ow-text);
+    letter-spacing: 2px;
+    font-size: 6em;
+    margin: 0;
+}
+
 .agent-title {
     width: 100%;
     position: absolute;
@@ -11,4 +19,5 @@ header img {
     padding-left: 150px;
     letter-spacing: 15px;
     font-style: italic;
+    top: 1.2em;
 }

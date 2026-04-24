@@ -62,3 +62,7 @@ body {
 .active {
   background-color: var(--ow-bg);
 }
+
+button {
+  cursor: pointer;
+}
