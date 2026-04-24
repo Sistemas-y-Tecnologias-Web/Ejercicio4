@@ -17,7 +17,7 @@ function HeroCard({ heroKey, name, portrait, role }) {
 HeroCard.propTypes = {
     name: PropTypes.string.isRequired,
     portrait: PropTypes.string.isRequired,
-    role: PropTypes.oneOf(["tank, damage", "support"]).isRequired,
+    role: PropTypes.oneOf(["tank", "damage", "support"]).isRequired,
     heroKey: PropTypes.string.isRequired,
 }
 
