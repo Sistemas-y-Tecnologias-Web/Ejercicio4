@@ -1,7 +1,7 @@
 import './HeroCard.css'
 import PropTypes from 'prop-types'
 
-export default function HeroCard({ heroKey, name, portrait, role }) {
+function HeroCard({ heroKey, name, portrait, role }) {
     return (
         <div className="card">
             <img
@@ -20,3 +20,5 @@ HeroCard.propTypes = {
     role: PropTypes.oneOf(["tank, damage", "support"]).isRequired,
     heroKey: PropTypes.string.isRequired,
 }
+
+export default HeroCard;

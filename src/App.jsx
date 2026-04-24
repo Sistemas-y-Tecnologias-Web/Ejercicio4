@@ -1,19 +1,22 @@
+import { useHeroes } from "./hooks/useHeroes"
 import HeroCard from "./components/HeroCard"
 
 function App() {
+  const { heroes, loading, error } = useHeroes()
+
+  if (loading) return <p>Cargando...</p>
+  if (error) return <p>Error: {error}</p>
 
   return (
     <>
-      <HeroCard
-        heroKey="lucio"
-        name="Lucio"
-        portrait="https://d15f34w2p8l1cc.cloudfront.net/overwatch/3429c394716364bbef802180e9763d04812757c205e1b4568bc321772096ed86.png"
-        role="damage" />
-      <HeroCard
-        heroKey="lucio"
-        name="Lucio"
-        portrait="https://d15f34w2p8l1cc.cloudfront.net/overwatch/3429c394716364bbef802180e9763d04812757c205e1b4568bc321772096ed86.png"
-        role="damag" />
+      {heroes.map(hero => (
+        <HeroCard
+          key={hero.key}
+          name={hero.name}
+          portrait={hero.portrait}
+          role={hero.role}
+        />
+      ))}
     </>
   )
 }
