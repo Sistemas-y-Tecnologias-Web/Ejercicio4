@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom"
-import { useState } from "react"
+import { Link, useLocation } from "react-router-dom"
 import './NavBar.css'
 
 export default function NavBar() {
-    const [activeTab, setActiveTab] = useState('home')
+    const location = useLocation()
+    const activeTab = location.pathname === '/heroes' ? 'heroes' : 'home'
 
     return (
         <nav>
@@ -14,14 +14,12 @@ export default function NavBar() {
             <div className="navigation-actions">
                 <Link
                     to="/"
-                    className={`btn ${activeTab === 'home' ? 'active' : undefined}`}
-                    onClick={() => setActiveTab('home')}>
+                    className={`btn ${activeTab === 'home' ? 'active' : undefined}`}>
                     Inicio
                 </Link>
                 <Link
                     to="/heroes"
-                    className={`btn ${activeTab === 'heroes' ? 'active' : undefined}`}
-                    onClick={() => setActiveTab('heroes')}>
+                    className={`btn ${activeTab === 'heroes' ? 'active' : undefined}`}>
                     Héroes
                 </Link>
             </div>

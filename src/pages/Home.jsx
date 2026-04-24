@@ -1,6 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
 import { useHeroes } from "../hooks/useHeroes"
-import NavBar from "../components/NavBar"
 import './Home.css'
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
 
     return (
         <>
-            <NavBar />
             <header>
                 <h1>Overwatch wiki</h1>
                 <p>Explora el roster completo de héroes de Overwatch</p>
