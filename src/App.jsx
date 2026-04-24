@@ -1,22 +1,14 @@
-import { useHeroes } from "./hooks/useHeroes"
-import HeroCard from "./components/HeroCard"
-
+import Home from "./pages/Home"
+import { Route, Routes, BrowserRouter } from "react-router-dom"
 function App() {
-  const { heroes, loading, error } = useHeroes()
-
-  if (loading) return <p>Cargando...</p>
-  if (error) return <p>Error: {error}</p>
-
   return (
     <>
-      {heroes.map(hero => (
-        <HeroCard
-          key={hero.key}
-          name={hero.name}
-          portrait={hero.portrait}
-          role={hero.role}
-        />
-      ))}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}/>
+        </Routes>
+      </BrowserRouter>
+
     </>
   )
 }
