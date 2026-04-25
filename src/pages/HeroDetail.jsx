@@ -31,8 +31,6 @@ export default function HeroDetail() {
         }
     }
 
-    const videoId = getYouTubeId(hero.story.media.link)
-
     return (
         <>
             <header>
@@ -45,8 +43,9 @@ export default function HeroDetail() {
                 <h2>{hero.name} story</h2>
                 <p className="about">{hero.story.summary}</p>
 
-                <iframe
-                    src={videoId ? `https://www.youtube.com/embed/${videoId}` : ""}
+                {hero.story.media?.link ? (
+                    <iframe
+                    src={getYouTubeId(hero.story.media.link) ? `https://www.youtube.com/embed/${getYouTubeId(hero.story.media.link)}` : ""}
                     frameBorder="0"
                     width="100%"
                     height="800"
@@ -54,6 +53,8 @@ export default function HeroDetail() {
                     allowFullScreen
                     title="Hero Video"
                 />
+                ) : undefined}
+                
 
             </header>
         </>
