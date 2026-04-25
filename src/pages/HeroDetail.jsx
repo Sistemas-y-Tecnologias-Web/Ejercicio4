@@ -3,15 +3,16 @@ import { useHero } from "../hooks/useHeroes"
 import TabContainer from "../components/TabContainer"
 import './HeroDetail.css'
 import NotFound from "./NotFound"
+import LoadingSpinner from "../components/LoadingSpinner"
 
 export default function HeroDetail() {
     const { key } = useParams()
     const { hero, loading, error } = useHero(key)
 
-    if (loading) return <p>Cargandooo...</p>
+    if (loading) return <LoadingSpinner message={`Loading hero`}/>
 
-    if (error) return <p>Error al cargar</p>
 
+    if (error) return <p>Error</p>
     if (!hero || !hero.name) {
         return <NotFound />
     }
@@ -30,8 +31,6 @@ export default function HeroDetail() {
         }
     }
 
-    const videoId = getYouTubeId(hero.story.media.link)
-
     return (
         <>
             <header>
@@ -44,8 +43,9 @@ export default function HeroDetail() {
                 <h2>{hero.name} story</h2>
                 <p className="about">{hero.story.summary}</p>
 
-                <iframe
-                    src={videoId ? `https://www.youtube.com/embed/${videoId}` : ""}
+                {hero.story.media?.link ? (
+                    <iframe
+                    src={getYouTubeId(hero.story.media.link) ? `https://www.youtube.com/embed/${getYouTubeId(hero.story.media.link)}` : ""}
                     frameBorder="0"
                     width="100%"
                     height="800"
@@ -53,6 +53,8 @@ export default function HeroDetail() {
                     allowFullScreen
                     title="Hero Video"
                 />
+                ) : undefined}
+                
 
             </header>
         </>
