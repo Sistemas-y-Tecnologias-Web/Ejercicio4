@@ -15,9 +15,10 @@ export default function HeroDetail() {
     return (
         <>
             <header>
-                <img src={hero.backgrounds[2].url} alt="" />
-                <h1 className="agent-title">{hero.name}</h1>
-                <p>{hero.description}</p>
+                <h1 className="agent-title" style={
+                    {backgroundImage: `url(${hero.backgrounds[2].url})`}
+                }>{hero.name}</h1>
+                <p className="about">{hero.description}</p>
                 <h2>Abilities</h2>
                 <TabContainer hero={hero}/>
             </header>

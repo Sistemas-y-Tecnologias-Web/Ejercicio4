@@ -5,13 +5,19 @@
   font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: var(--ow-bg);
+  overflow-x: hidden;
 }
 
 :root {
   --ow-bg:      #0D0F1A;
+  --ow-bg2:     #010416;
   --ow-surface: #1A1D2E;
   --ow-border:  #2A2D3E;
   --ow-text:    #E2E8F0;

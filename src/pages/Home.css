@@ -4,6 +4,10 @@ header {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 header h1 {

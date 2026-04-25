@@ -1,13 +1,14 @@
 nav {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
+    margin: 0 auto;
     justify-content: space-between;
     background-color: var(--ow-surface);
-    padding: 10px;
+    padding: 10px 20px;
+    box-sizing: border-box;
     z-index: 50;
 }
 

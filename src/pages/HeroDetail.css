@@ -1,23 +1,38 @@
-header img {
-    height: auto;
-    width: 100%;
-
+header {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  background-color: var(--ow-bg2);
 }
 
 header h2 {
-    font-family: 'OvFont';
-    color: var(--ow-text);
-    letter-spacing: 2px;
-    font-size: 6em;
-    margin: 0;
+  font-family: "OvFont";
+  color: var(--ow-text);
+  letter-spacing: 2px;
+  font-size: 6em;
+  margin: 0;
+}
+
+.about {
+    font-size: 3em;
+    text-align: center;
 }
 
 .agent-title {
-    width: 100%;
-    position: absolute;
-    font-size: 10em;
-    padding-left: 150px;
-    letter-spacing: 15px;
-    font-style: italic;
-    top: 1.2em;
+  font-size: clamp(3em, 8vw, 10em);
+  letter-spacing: 15px;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  z-index: 10;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 25px;
 }
