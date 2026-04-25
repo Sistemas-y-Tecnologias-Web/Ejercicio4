@@ -3,15 +3,16 @@ import { useHero } from "../hooks/useHeroes"
 import TabContainer from "../components/TabContainer"
 import './HeroDetail.css'
 import NotFound from "./NotFound"
+import LoadingSpinner from "../components/LoadingSpinner"
 
 export default function HeroDetail() {
     const { key } = useParams()
     const { hero, loading, error } = useHero(key)
 
-    if (loading) return <p>Cargandooo...</p>
+    if (loading) return <LoadingSpinner message={`Loading hero`}/>
 
-    if (error) return <p>Error al cargar</p>
 
+    if (error) return <p>Error</p>
     if (!hero || !hero.name) {
         return <NotFound />
     }
