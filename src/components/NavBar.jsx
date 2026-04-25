@@ -8,7 +8,7 @@ export default function NavBar() {
     return (
         <nav>
             <div className="logo">
-                <img src="./img/OvLogo.png" alt="" />
+                <img src="/img/OvLogo.png" alt="" />
                 <h2>Overwatch</h2>
             </div>
             <div className="navigation-actions">

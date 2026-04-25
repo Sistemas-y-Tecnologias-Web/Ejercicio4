@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom"
 import { useHero } from "../hooks/useHeroes"
 import TabContainer from "../components/TabContainer"
 import './HeroDetail.css'
+import NotFound from "./NotFound"
 
 export default function HeroDetail() {
     const { key } = useParams()
@@ -11,6 +12,9 @@ export default function HeroDetail() {
 
     if (error) return <p>Error al cargar</p>
 
+    if (!hero || !hero.name) {
+        return <NotFound />
+    }
     const getYouTubeId = (url) => {
         try {
             const parsed = new URL(url)
@@ -49,7 +53,7 @@ export default function HeroDetail() {
                     allowFullScreen
                     title="Hero Video"
                 />
-                
+
             </header>
         </>
     )
