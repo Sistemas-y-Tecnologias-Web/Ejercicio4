@@ -1,0 +1,28 @@
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-family: 'OvFont';
+    color: var(--ow-text);
+    font-size: 4em;
+}
+
+header p {
+    font-family: 'OvFont';
+    font-size: 1.5em;
+    color: var(--ow-text);
+}
+
+.actions {
+    display: flex;
+    gap: 15px;
+}

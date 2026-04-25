@@ -1,12 +1,74 @@
 @font-face {
   font-family: "OvFont";
-  src: url("./fonts/big_noodle_titling.ttf") format("truetype");
+  src: url("/fonts/big_noodle_titling.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--ow-bg);
+  overflow-x: hidden;
+}
+
 :root {
-  --primary: #FA9C1D;
-  --secondary: #4A4C4E;
-  --background: #FFFFFF;
+  --ow-bg:      #0D0F1A;
+  --ow-bg2:     #010416;
+  --ow-surface: #1A1D2E;
+  --ow-border:  #2A2D3E;
+  --ow-text:    #E2E8F0;
+  --ow-muted:   #64748B;
+  --ow-orange:  #F97316;
+  --ow-blue:    #2196F3;
+  --ow-tank:    #0A1430;
+  --ow-damage:  #4A1F03;
+  --ow-support: #002824;
+}
+
+[data-theme="light"] {
+  --ow-bg:      #F5F6FA;
+  --ow-surface: #FFFFFF;
+  --ow-border:  #D8DAE5;
+  --ow-text:    #1E2030;
+  --ow-muted:   #6B7080;
+  --ow-orange:  #C75A0A;
+  --ow-blue:    #1565C0;
+  --ow-tank:    #2E4A8C;
+  --ow-damage:  #C75A0A;
+  --ow-support: #007D72;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: auto;
+    height: auto;
+    font-family: 'OvFont';
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 7px 15px ;
+    color: var(--ow-text);
+}
+
+.primary {
+  background-color: var(--ow-border);
+}
+
+.secondary {
+  background-color: transparent;
+  border: 2px solid var(--ow-surface);
+}
+
+.active {
+  background-color: var(--ow-bg);
+}
+
+button {
+  cursor: pointer;
 }

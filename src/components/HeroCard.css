@@ -3,26 +3,25 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary);
     width: 256px;
     height: auto;
     border-radius: 20px;
-    box-shadow: 0px 0px 5px 5px var(--secondary);
     margin: 25px;
     transition: all 1s;
     overflow: hidden;
+    text-decoration: none;
 }
 
 .card img {
     width: auto;
     height: auto;
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--ow-border);
 }
 
 .card h3 {
     font-family: 'OvFont';
     font-size: 42px;
-    color: var(--background);
+    color: var(--ow-text);
     width: auto;
     height: auto;
     margin: 5px;
@@ -32,7 +31,7 @@
 .card p {
     font-family: 'OvFont';
     font-size: 30px;
-    color: var(--secondary);
+    color: var(--ow-muted);
     margin: 0;
     margin-bottom: 15px;
     padding: 0;
@@ -40,4 +39,18 @@
 
 .card:hover {
     transform: scale(1.1);
+}
+
+.damage {
+    background-color: var(--ow-damage);
+    box-shadow: 0px 0px 5px 5px var(--ow-damage);
+}
+
+.tank {
+    background-color: var(--ow-tank);
+    box-shadow: 0px 0px 5px 5px var(--ow-tank);
+}
+.support {
+    background-color: var(--ow-support);
+    box-shadow: 0px 0px 5px 5px var(--ow-support);
 }
