@@ -10,15 +10,15 @@
 .spinner {
   width: 40px;
   height: 40px;
-  border: 3px solid #2a2a3a;
-  border-top-color: #f97316;
+  border: 3px solid var(--ow-border);
+  border-top-color: var(--ow-orange);
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
 }
 
 .message {
   font-size: 14px;
-  color: #64748b;
+  color: var(--ow-muted);
 }
 
 @keyframes spin {
