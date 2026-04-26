@@ -39,7 +39,7 @@
 .filters .search label, .filters .combo-box label {
     font-size: 2em;
     font-weight: 600;
-    color: #e0e0e0;
+    color: var(--ow-text);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: 'OvFont';
@@ -51,9 +51,9 @@
     height: 44px;
     padding: 0 16px;
     border-radius: 8px;
-    border: 2px solid #3a3a5c;
-    background: linear-gradient(145deg, #1a1a2e, #16162a);
-    color: #fff;
+    border: 2px solid var(--ow-border);
+    background: var(--ow-surface);
+    color: var(--ow-text);
     font-size: 14px;
     transition: all 0.3s ease;
     outline: none;
@@ -62,12 +62,12 @@
 }
 
 .filters input:focus {
-    border-color: #7c3aed;
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+    border-color: var(--ow-orange);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
 }
 
 .filters input::placeholder {
-    color: #6b7280;
+    color: var(--ow-muted);
 }
 
 .filters select {
@@ -75,15 +75,15 @@
     height: 44px;
     padding: 0 16px;
     border-radius: 8px;
-    border: 2px solid #3a3a5c;
-    background: linear-gradient(145deg, #1a1a2e, #16162a);
-    color: #fff;
+    border: 2px solid var(--ow-border);
+    background: var(--ow-surface);
+    color: var(--ow-text);
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
     outline: none;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23a78bfa' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23f97316' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 14px center;
     padding-right: 36px;
@@ -92,13 +92,13 @@
 }
 
 .filters select:focus {
-    border-color: #7c3aed;
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+    border-color: var(--ow-orange);
+    box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
 }
 
 .filters select option {
-    background: #1a1a2e;
-    color: #fff;
+    background: var(--ow-surface);
+    color: var(--ow-text);
     padding: 10px;
     font-family: 'OvFont';
     font-size: 1em;

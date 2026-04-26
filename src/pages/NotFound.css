@@ -17,7 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #ffffff;
+  color: var(--ow-text);
   text-align: center;
   padding: 20px;
 }
@@ -26,8 +26,8 @@
 .notfound-code {
   font-size: 10rem;
   margin: 0;
-  color: #f99e1a;
-  text-shadow: 0 0 20px rgba(249, 158, 26, 0.8);
+  color: var(--ow-orange);
+  text-shadow: 0 0 20px rgba(249, 115, 22, 0.8);
 }
 
 /* título tipo Overwatch */
@@ -35,22 +35,22 @@
   font-size: 2.5rem;
   margin: 10px 0;
   letter-spacing: 3px;
-  color: #00d9ff;
-  text-shadow: 0 0 10px rgba(0, 217, 255, 0.7);
+  color: var(--ow-blue);
+  text-shadow: 0 0 10px rgba(33, 150, 243, 0.7);
 }
 
 /* descripción */
 .notfound-text {
   max-width: 500px;
   margin-bottom: 30px;
-  color: #cfd8dc;
+  color: var(--ow-muted);
 }
 
 /* botón estilo UI */
 .notfound-btn {
   padding: 12px 30px;
-  border: 2px solid #f99e1a;
-  color: #f99e1a;
+  border: 2px solid var(--ow-orange);
+  color: var(--ow-orange);
   text-decoration: none;
   font-weight: bold;
   letter-spacing: 2px;
@@ -58,7 +58,7 @@
 }
 
 .notfound-btn:hover {
-  background-color: #f99e1a;
-  color: #0a0f1e;
-  box-shadow: 0 0 15px #f99e1a;
+  background-color: var(--ow-orange);
+  color: var(--ow-bg);
+  box-shadow: 0 0 15px var(--ow-orange);
 }

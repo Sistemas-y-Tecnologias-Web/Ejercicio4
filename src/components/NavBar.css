@@ -40,3 +40,16 @@ nav {
     gap: 15px;
 }
 
+.global-changes {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.theme-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 25px;
+}
+
