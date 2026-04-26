@@ -43,14 +43,16 @@ export default function Heroes() {
                 </div>
             </div>
             <div className="heroes-container">
-                {heroesFiltered.map((hero) => (
+                {heroesFiltered.length ? heroesFiltered.map((hero) => (
                     <HeroCard
                         key={hero.key}
                         heroKey={hero.key}
                         name={hero.name}
                         portrait={hero.portrait}
                         role={hero.role} />
-                ))}
+                )) : (
+                    <h1>There's no heroes here!</h1>
+                )}
             </div>
         </div>
     )
