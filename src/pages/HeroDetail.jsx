@@ -34,9 +34,16 @@ export default function HeroDetail() {
     return (
         <>
             <header>
-                <h1 className="agent-title" style={
-                    { backgroundImage: `url(${hero.backgrounds[2].url})` }
-                }>{hero.name}</h1>
+                <div className="hero-header">
+                    <h1 className="agent-title" style={
+                        { backgroundImage: `url(${hero.backgrounds[2].url})` }
+                    }>{hero.name}</h1>
+                    <img 
+                        className="hero-portrait-mobile" 
+                        src={hero.portrait} 
+                        alt={hero.name} 
+                    />
+                </div>
                 <p className="about">{hero.description}</p>
                 <h2>Abilities</h2>
                 <TabContainer hero={hero} />
@@ -45,6 +52,7 @@ export default function HeroDetail() {
 
                 {hero.story.media?.link ? (
                     <iframe
+                    className="story-video"
                     src={getYouTubeId(hero.story.media.link) ? `https://www.youtube.com/embed/${getYouTubeId(hero.story.media.link)}` : ""}
                     frameBorder="0"
                     width="100%"
@@ -54,8 +62,6 @@ export default function HeroDetail() {
                     title="Hero Video"
                 />
                 ) : undefined}
-                
-
             </header>
         </>
     )
