@@ -16,13 +16,13 @@ export default function Home() {
         <>
             <header>
                 <h1>Overwatch wiki</h1>
-                <p>Explora el roster completo de héroes de Overwatch</p>
+                <p>Explore all the agents of Overwatch</p>
                 <div className="actions">
                     <Link to="/heroes" className="btn primary">
-                        Ver todos los héroes
+                        See all heroes
                     </Link>
                     <button onClick={goToRandomHero} className="btn secondary">
-                        Ver un héroe aleatorio
+                        See random hero
                     </button>
                 </div>
             </header>

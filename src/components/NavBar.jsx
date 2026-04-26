@@ -35,13 +35,13 @@ export default function NavBar() {
                     to="/"
                     className={`btn ${activeTab === 'home' ? 'active' : undefined}`}
                     onClick={closeMenu}>
-                    Inicio
+                    Home
                 </Link>
                 <Link
                     to="/heroes"
                     className={`btn ${activeTab === 'heroes' ? 'active' : undefined}`}
                     onClick={closeMenu}>
-                    Héroes
+                    Heroes
                 </Link>
             </div>
             <div className="global-changes">
