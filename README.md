@@ -109,7 +109,7 @@ ejercicio4/
 
 ```bash
 # 1. Clone the repository
-git clone <repository-url>
+git clone https://github.com/Sistemas-y-Tecnologias-Web/Ejercicio4.git
 cd ejercicio4
 
 # 2. Install dependencies
