@@ -1,0 +1,64 @@
+.notfound-container {
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://images.blz-contentstack.com/v3/assets/blt321317473c90505c/bltacb8b9c0c1c02baf/overwatch-2-heroes.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* Oscurecer para efecto HUD */
+.notfound-overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(10, 15, 30, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--ow-text);
+  text-align: center;
+  padding: 20px;
+}
+
+/* 404 gigante */
+.notfound-code {
+  font-size: 10rem;
+  margin: 0;
+  color: var(--ow-orange);
+  text-shadow: 0 0 20px rgba(249, 115, 22, 0.8);
+}
+
+/* título tipo Overwatch */
+.notfound-title {
+  font-size: 2.5rem;
+  margin: 10px 0;
+  letter-spacing: 3px;
+  color: var(--ow-blue);
+  text-shadow: 0 0 10px rgba(33, 150, 243, 0.7);
+}
+
+/* descripción */
+.notfound-text {
+  max-width: 500px;
+  margin-bottom: 30px;
+  color: var(--ow-muted);
+}
+
+/* botón estilo UI */
+.notfound-btn {
+  padding: 12px 30px;
+  border: 2px solid var(--ow-orange);
+  color: var(--ow-orange);
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.notfound-btn:hover {
+  background-color: var(--ow-orange);
+  color: var(--ow-bg);
+  box-shadow: 0 0 15px var(--ow-orange);
+}
