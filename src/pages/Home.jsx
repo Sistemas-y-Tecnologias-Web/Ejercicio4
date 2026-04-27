@@ -14,7 +14,7 @@ export default function Home() {
 
     return (
         <>
-            <header>
+            <header className="home-header">
                 <h1>Overwatch wiki</h1>
                 <p>Explore all the agents of Overwatch</p>
                 <div className="actions">
