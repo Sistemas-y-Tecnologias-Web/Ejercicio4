@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import './Tab.css'
 
 export default function Tab({tabs, activeTab, setActiveTab}){
@@ -6,4 +7,13 @@ export default function Tab({tabs, activeTab, setActiveTab}){
             <img src={tabs.icon} alt="" />
         </button>
     )
+}
+
+Tab.propTypes = {
+    tabs: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        icon: PropTypes.string.isRequired,
+    }).isRequired,
+    activeTab: PropTypes.string.isRequired,
+    setActiveTab: PropTypes.func.isRequired,
 }

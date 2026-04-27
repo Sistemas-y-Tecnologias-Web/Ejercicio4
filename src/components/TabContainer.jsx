@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from 'prop-types'
 import Tab from "./Tab";
 import './TabContainer.css'
 
@@ -90,4 +91,27 @@ export default function TabContainer({ hero }) {
             </div>
         </section>
     )
+}
+
+TabContainer.propTypes = {
+    hero: PropTypes.shape({
+        abilities: PropTypes.arrayOf(
+            PropTypes.shape({
+                name: PropTypes.string.isRequired,
+                icon: PropTypes.string.isRequired,
+                description: PropTypes.string.isRequired,
+                video: PropTypes.shape({
+                    link: PropTypes.shape({
+                        webm: PropTypes.string,
+                    }),
+                }),
+            })
+        ).isRequired,
+        hitpoints: PropTypes.shape({
+            armor: PropTypes.number.isRequired,
+            health: PropTypes.number.isRequired,
+            shields: PropTypes.number.isRequired,
+            total: PropTypes.number.isRequired,
+        }).isRequired,
+    }).isRequired,
 }

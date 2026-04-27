@@ -9,6 +9,7 @@ A single-page application built with React and Vite that lets users browse and e
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
+- [Components](#components)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Local Development](#local-development)
@@ -94,6 +95,84 @@ ejercicio4/
 ├── .env.example
 ├── vite.config.js
 └── eslint.config.js
+```
+
+---
+
+## Components
+
+The following reusable components are located in `src/components/`. All props are validated with **PropTypes**.
+
+---
+
+### `HeroCard`
+
+Displays a hero card with portrait, name, and role. Used in the heroes grid page. Clicking navigates to the hero's detail page.
+
+| Prop | Type | Required | Description |
+|---|---|---|---|
+| `heroKey` | `string` | Yes | Hero identifier used to build the route (`/heroes/:key`) |
+| `name` | `string` | Yes | Display name of the hero |
+| `portrait` | `string` | Yes | URL of the hero portrait image |
+| `role` | `"tank" \| "damage" \| "support"` | Yes | Hero role; controls the card's accent colour |
+
+```jsx
+<HeroCard
+  heroKey="ana"
+  name="Ana"
+  portrait="https://..."
+  role="support"
+/>
+```
+
+---
+
+### `LoadingSpinner`
+
+Animated spinner shown while data is being fetched. Optionally displays a loading message below the spinner.
+
+| Prop | Type | Required | Default | Description |
+|---|---|---|---|---|
+| `message` | `string` | No | `""` | Text displayed beneath the spinner |
+
+```jsx
+<LoadingSpinner message="Loading heroes..." />
+```
+
+---
+
+### `Tab`
+
+A single ability tab button shown in the desktop view of the hero detail page. Highlights when its ability is the active one.
+
+| Prop | Type | Required | Description |
+|---|---|---|---|
+| `tabs` | `{ name: string, icon: string }` | Yes | Ability data: name used to match active state, icon displayed on the button |
+| `activeTab` | `string` | Yes | Name of the currently selected ability |
+| `setActiveTab` | `func` | Yes | Callback invoked when the tab is clicked |
+
+```jsx
+<Tab
+  tabs={{ name: "Biotic Rifle", icon: "https://..." }}
+  activeTab={activeAbility}
+  setActiveTab={() => handleAbility(tab)}
+/>
+```
+
+---
+
+### `TabContainer`
+
+Renders the full abilities section for a hero. On desktop it shows tabs + an info panel; on mobile it shows interactive flip-cards. Also renders the hero's hitpoints breakdown.
+
+| Prop | Type | Required | Description |
+|---|---|---|---|
+| `hero` | `object` | Yes | Hero object from the Overfast API (see shape below) |
+| `hero.abilities` | `Array<{ name, icon, description, video }>` | Yes | List of hero abilities |
+| `hero.hitpoints` | `{ armor, health, shields, total }` | Yes | Hitpoint values (all numbers) |
+
+```jsx
+<TabContainer hero={heroData} />
 ```
 
 ---
