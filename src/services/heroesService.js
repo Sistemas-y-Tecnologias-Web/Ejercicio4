@@ -1,4 +1,4 @@
-const BASE_URL = "https://overfast-api.tekrop.fr"
+const BASE_URL = import.meta.env.VITE_API_URL
 
 
 export const fetchHeroes = async () => {
