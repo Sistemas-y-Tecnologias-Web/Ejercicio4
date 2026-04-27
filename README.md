@@ -206,6 +206,10 @@ The app will be available at `http://localhost:5173`.
 ### Docker
 
 ```bash
+
+# Set up environment variables
+cp .env.example .env
+
 # Copy and edit the compose file
 cp docker-compose.yml.example docker-compose.yml
 
